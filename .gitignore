@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build / output
+dist/
+.next/
+out/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+*.log
+npm-debug.log*
+
+# Hardhat
+contracts/cache/
+contracts/artifacts/
+
+# Prisma
+backend/src/prisma/*.db
+backend/src/prisma/*.db-journal

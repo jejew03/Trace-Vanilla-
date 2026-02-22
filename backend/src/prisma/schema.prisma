@@ -1,0 +1,41 @@
+// Prisma schema — models: Actor, Lot, HcsEvent (see CURSOR_PROJECT.md)
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Actor {
+  id            String   @id @default(cuid())
+  hederaAccount String   @unique
+  role          String
+  name          String?
+  createdAt     DateTime @default(now())
+}
+
+model Lot {
+  id        String    @id @default(cuid())
+  lotId     String    @unique
+  tokenId   String
+  serial    Int
+  ipfsRef   String?
+  createdAt DateTime  @default(now())
+  events    HcsEvent[]
+}
+
+model HcsEvent {
+  id            String   @id @default(cuid())
+  lotId         String
+  step          String
+  actorAccount  String
+  role          String
+  timestamp     DateTime
+  ipfsRef       String?
+  eventHash     String?
+  txId          String?
+  lot           Lot      @relation(fields: [lotId], references: [lotId])
+  @@index([lotId])
+}

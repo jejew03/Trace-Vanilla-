@@ -1,0 +1,20 @@
+---
+description: Mettre à jour le suivi d'avancement dans CURSOR_PROJECT.md après chaque modification
+alwaysApply: true
+---
+
+# Suivi d'avancement Vanilla Trace
+
+**À chaque modification significative du projet**, tu dois mettre à jour `CURSOR_PROJECT.md` :
+
+1. **Tableau "SUIVI D'AVANCEMENT PAR SPRINT"** (section 🗓️)  
+   - Marquer les tâches réalisées : `[x]` Terminé, `[~]` En cours, `[ ]` À faire, `[!]` Bloqué.  
+   - Adapter en fonction du travail effectué dans la session.
+
+2. **Bloc "ÉTAT ACTUEL DU PROJET"** (section 📊, en bas du fichier)  
+   - **Dernière mise à jour** : date du jour (ex. `22 fév. 2026`).  
+   - **Sprint actuel** : garder ou ajuster selon l’avancement.  
+   - **Blocages** : indiquer s’il y en a, sinon `Aucun`.  
+   - **Prochaine action** : prochaine tâche ou prompt à exécuter (ex. `Exécuter PROMPT 2 — Service Hedera`).
+
+Faire cette mise à jour **en fin de session** ou **dès qu’une tâche de sprint est complétée**, sans que l’utilisateur ait à le demander.

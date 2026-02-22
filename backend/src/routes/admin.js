@@ -1,0 +1,1 @@
+// Dashboard impact Hedera — placeholder

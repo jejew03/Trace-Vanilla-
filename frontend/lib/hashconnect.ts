@@ -1,0 +1,1 @@
+// HashConnect client — placeholder
