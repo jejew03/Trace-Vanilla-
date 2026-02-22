@@ -148,6 +148,7 @@ RATE_LIMIT_MAX=100
 NEXT_PUBLIC_API_URL=http://localhost:3001
 NEXT_PUBLIC_HEDERA_NETWORK=testnet
 NEXT_PUBLIC_HASHCONNECT_APP_NAME=VanillaTrace
+NEXT_PUBLIC_HASHCONNECT_PROJECT_ID=   # WalletConnect Cloud project ID (optionnel ; si vide = mode démo avec compte saisi à la main)
 ```
 
 ---
@@ -349,34 +350,34 @@ contract VanillaTrace {
 - [x] Setup Next.js 14 + Tailwind CSS
 - [x] Setup Express + Prisma + PostgreSQL
 - [x] Configurer les variables d'environnement
-- [ ] Premier commit GitHub avec structure de base
+- [x] Premier commit GitHub avec structure de base
 
 ### SPRINT 2 — Core Hedera (24 fév. – 2 mars)
-- [ ] `hedera.js` — service mint NFT HTS (createToken + mintToken)
-- [ ] `hedera.js` — service publication message HCS
-- [ ] `hedera.js` — service transfert NFT HTS entre acteurs
-- [ ] `roles.js` — vérification rôle on-chain via contract
-- [ ] `mirror.js` — lecture messages HCS depuis Mirror Node API
-- [ ] PostgreSQL indexation HCS events (table `hcs_events`)
-- [ ] API route `POST /lots` — créer un lot + mint NFT
-- [ ] API route `POST /lots/:id/steps` — valider étape + publier HCS
+- [x] `hedera.js` — service mint NFT HTS (createToken + mintToken)
+- [x] `hedera.js` — service publication message HCS
+- [x] `hedera.js` — service transfert NFT HTS entre acteurs
+- [x] `roles.js` — vérification rôle on-chain via contract
+- [x] `mirror.js` — lecture messages HCS depuis Mirror Node API
+- [x] PostgreSQL indexation HCS events (table `hcs_events`)
+- [x] API route `POST /lots` — créer un lot + mint NFT
+- [x] API route `POST /lots/:id/steps` — valider étape + publier HCS
 - [x] Tests Hardhat sur `VanillaTrace.sol`
 
 ### SPRINT 3 — Frontend & UX (3-9 mars)
 - [ ] Landing page `/` (one-liner + CTA)
-- [ ] `WalletConnect.tsx` — intégration HashConnect/HashPack
-- [ ] Dashboard acteurs `/dashboard` (mes lots + actions disponibles)
+- [x] `WalletConnect.tsx` — intégration HashConnect/HashPack
+- [x] Dashboard acteurs `/dashboard` (mes lots + actions disponibles)
 - [ ] Page création lot `/lots/new` (formulaire FARMER → mint NFT)
 - [ ] Page validation étape `/lots/:id/step` (par rôle)
-- [ ] `QRCode.tsx` — génération QR par lot
+- [x] `QRCode.tsx` — génération QR par lot
 - [ ] `QRScanner.tsx` — scanner QR page `/scan`
 - [ ] i18n français/anglais (next-intl)
 
 ### SPRINT 4 — Vérification & Admin (10-16 mars)
-- [ ] API route `GET /verify/:lotId` — historique complet < 3s
-- [ ] Portail de vérification `/verify/:lotId`
-- [ ] `TraceabilityScore.tsx` — score 0-100% calculé depuis HCS events
-- [ ] `StepTimeline.tsx` — timeline visuelle des étapes
+- [x] API route `GET /verify/:lotId` — historique complet < 3s
+- [x] Portail de vérification `/verify/:lotId`
+- [x] `TraceabilityScore.tsx` — score 0-100% calculé depuis HCS events
+- [x] `StepTimeline.tsx` — timeline visuelle des étapes
 - [ ] Dashboard admin `/admin` — métriques impact Hedera
 - [ ] `ImpactCounter.tsx` — #comptes, #NFTs, #HCS, #transferts
 - [ ] Tests de performance (vérifier < 3s sur `/verify`)
@@ -832,9 +833,9 @@ Génère les fichiers de déploiement et le README final pour les juges du hacka
 
 ```
 Dernière mise à jour : 22 fév. 2026
-Sprint actuel       : Sprint 1 — Setup (terminé) / Sprint 2 — Core Hedera
+Sprint actuel       : Sprint 3 — Frontend & UX
 Blocages            : Aucun
-Prochaine action    : Exécuter PROMPT 2 — Service Hedera (backend)
+Prochaine action    : Exécuter PROMPT 7 — Page création lot /lots/new
 ```
 
 ---
